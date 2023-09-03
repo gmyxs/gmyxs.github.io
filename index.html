@@ -30,7 +30,8 @@
                 <p>免费GM游戏，单机破解游戏，工具箱</p>
             </div>
         </div>
-        <a id="eBtn" href="javascript:;" class="btn">立即下载</a>
+        <a id="eBtn" href="javascript:;" class="btn">立即下载(地址1)</a>
+        <a id="eBtn2" href="javascript:;" class="btn">立即下载(地址2)</a>
         <div class="slogan">
             <span>最新版本：V2.1</span>
         </div>
@@ -47,8 +48,10 @@
         //配置
         var config = {
             logo: './imgs/logo.png', //自定义logo图片
-            iPhone_download_url: "https://www.123pan.com/s/XH9uVv-VxLjh.html", // iPhone下载链接
-            android_download_url: "https://www.123pan.com/s/XH9uVv-VxLjh.html", // Android下载链接
+            iPhone_download_url: "https://www.123pan.com/s/XH9uVv-g5Ljh.html", // iPhone下载链接
+            android_download_url: "https://www.123pan.com/s/XH9uVv-g5Ljh.html", // Android下载链接
+            iPhone_download_url2: "https://lqyx.wyyidc.cn/lan/jx.php?url=https%3A%2F%2Fwyxw.lanzoul.com%2FiLEAf17bu1qh&pwd=250s&type=down", // iPhone下载链接
+            android_download_url2: "https://lqyx.wyyidc.cn/lan/jx.php?url=https%3A%2F%2Fwyxw.lanzoul.com%2FiLEAf17bu1qh&pwd=250s&type=down", // Android下载链接
             open_app_url: "",
             covers: [   //APP截图列表
                 './imgs/1.jpeg',
@@ -71,13 +74,17 @@
             var eCovers = $('#eCovers');
             var eBtn = $('#eBtn');
             var eLogo = $('#eLogo');
-
+            var eBtn2 = $('#eBtn2');
+            
             if (env().isAndroid) {
                 open_app_url = config.android_download_url;
+                open_app_url2 = config.android_download_url2;
             } else {
                 open_app_url = config.iPhone_download_url;
+                open_app_url2 = config.iPhone_download_url2;
             }
             eBtn.href = open_app_url;
+            eBtn2.href = open_app_url2;
             //logo图片设置
             eLogo.src = config.logo;
 
